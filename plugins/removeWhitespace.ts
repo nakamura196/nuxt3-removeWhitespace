@@ -14,7 +14,7 @@ function trimText(node: NodeListOf<ChildNode>) {
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("removeWhitespace", {
-    created(el: HTMLElement) {
+    mounted(el: HTMLElement) {
       trimText(el.childNodes);
     },
     updated(el: HTMLElement) {
