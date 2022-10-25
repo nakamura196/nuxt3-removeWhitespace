@@ -13,7 +13,28 @@ function trimText(node: NodeListOf<ChildNode>) {
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.directive("removeWhitespace", (el: HTMLElement) => {
-    trimText(el.childNodes)
-  });
+  nuxtApp.vueApp.directive("removeWhitespace", {
+    inserted(el: HTMLElement) {
+      trimText(el.childNodes)
+    },
+    mounted(el: HTMLElement) {
+      trimText(el.childNodes)
+    },
+    created(el: HTMLElement) {
+      trimText(el.childNodes)
+    },
+    updated(el: HTMLElement) {
+      trimText(el.childNodes)
+    },
+    componentUpdated(el: HTMLElement) {
+      trimText(el.childNodes)
+    }
+  }/*(el: HTMLElement) => {
+    inserted: {
+      trimText(el.childNodes)
+    }
+    componentUpdated: {
+      trimText(el.childNodes)
+    }
+  }*/);
 });
