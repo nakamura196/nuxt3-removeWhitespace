@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Static HTML export with Nuxt
-        run: NUXT_APP_CDN_URL=https://nakamura196.github.io/nuxt3-removeWhitespace/ npm run generate
+        run: npm run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
