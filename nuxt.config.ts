@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   // ssr:false
   app: {
-    baseURL: "/nuxt3-removeWhitespace",
+    baseURL: "/nuxt3-removeWhitespace", // /<reponame>
   },
 });
